@@ -14,13 +14,13 @@
 		el = $bindable(),
 		forceMount = false,
 		...restProps
-	}: ContentProps = $props();
+	}: Omit<ContentProps, "contenteditable" | "ontoggle"> = $props();
 
 	const state = useDialogContent({
 		id: box.with(() => id),
 	});
 
-	const mergedProps = $derived(mergeProps(restProps, state.props));
+	const mergedProps = $derived(mergeProps(restProps, state.props) as any);
 </script>
 
 <PresenceLayer {...mergedProps} present={state.root.open.value || forceMount}>

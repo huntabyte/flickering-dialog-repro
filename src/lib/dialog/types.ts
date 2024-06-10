@@ -27,8 +27,7 @@ export type DialogRootProps = DialogRootPropsWithoutHTML;
 
 type DialogContentPropsWithoutHTML = WithAsChild<PresenceLayerProps>;
 
-export type DialogContentProps = DialogContentPropsWithoutHTML &
-	PrimitiveDivAttributes;
+export type DialogContentProps = DialogContentPropsWithoutHTML & PrimitiveDivAttributes
 
 type DialogOverlayPropsWithoutHTML = WithAsChild<PresenceLayerProps>;
 export type DialogOverlayProps = DialogOverlayPropsWithoutHTML &

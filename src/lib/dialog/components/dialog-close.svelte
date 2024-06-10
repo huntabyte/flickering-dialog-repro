@@ -7,7 +7,7 @@
 
 	const state = useDialogClose();
 
-	const mergedProps = $derived(mergeProps(restProps, state.props));
+	const mergedProps = $derived(mergeProps(restProps, state.props) as any);
 </script>
 
 {#if asChild}

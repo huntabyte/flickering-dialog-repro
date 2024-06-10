@@ -20,7 +20,7 @@
 		id: box.with(() => id),
 	});
 
-	const mergedProps = $derived(mergeProps(restProps, state.props));
+	const mergedProps = $derived(mergeProps(restProps, state.props) as any);
 </script>
 
 <PresenceLayer {id} present={state.root.open.value || forceMount}>
